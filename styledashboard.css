@@ -1,0 +1,30 @@
+.Dashboard {
+    background: linear-gradient(to bottom, #d7efff, #a6d6f7);
+}
+
+.header2 {
+    background-color: #72C5E0 !important;
+    position: absolute;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    background: #72C5E0 !important;
+}
+
+.log_in {
+    background: #DDF1F8;
+}
+
+.log_in:active {
+    background: #64bede;
+}
+
+.sign_up {
+    background: #F8EB74;
+}
+
+.sign_up:active {
+    background: #e9d83c;
+}
