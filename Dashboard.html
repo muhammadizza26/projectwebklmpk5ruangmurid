@@ -4,26 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styledashboard.css"/>
+    <link rel="stylesheet" href="styledashboard.css" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <title>Dashboard</title>
 </head>
-<body class="Dashboard h-screen">
-    <div class="header1 bg-white w-full h-20  flex items-center justify-between px-4">
-        <img src="Logo\image_2025-02-16_183203412.png">
 
+<body class="Dashboard h-screen">
+    <div class="header1 bg-white w-full h-20 flex items-center justify-between px-4">
+        <img class="logo" src="logo ruang murid.png" alt="Logo">
         <div>
-        <button type="button" class="log_in py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none active: disabled:opacity-50 disabled:pointer-events-none">
-            Log In
-        </button>
-        <button type="button" class="sign_up py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
-            Sign Up
-        </button>
+            <button type="button"
+                class="log_in py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none active: disabled:opacity-50 disabled:pointer-events-none">
+                Log In
+            </button>
+            <button type="button"
+                class="sign_up py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                Sign Up
+            </button>
         </div>
     </div>
-    <div class="header2 w-full h-19">
+    <div class="header2 w-full">
+        <div class="search-container">
+            <div class="absolute inset-y-0 start-0 flex items-center pointer-events-none z-20 ps-3.5">
+                <svg class="shrink-0 size-4 text-black-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.3-4.3"></path>
+                </svg>
+            </div>
+            <input type="text" placeholder="Search...">
+        </div>
     </div>
-    <div class="bottom w-full h-19">
-    </div>
+    <div class="bottom w-full"></div>
 </body>
+</body>
+
 </html>
