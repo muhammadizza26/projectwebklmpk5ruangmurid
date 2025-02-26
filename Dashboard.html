@@ -6,37 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styledashboard.css" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="systemdashboard.js"></script>
     <title>Dashboard</title>
 </head>
 
-<body class="Dashboard h-screen">
-    <div class="header1 bg-white w-full h-20 flex items-center justify-between px-4">
-        <img class="logo" src="logo ruang murid.png" alt="Logo">
-        <div>
-            <button type="button"
-                class="log_in py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none active: disabled:opacity-50 disabled:pointer-events-none">
-                Log In
-            </button>
-            <button type="button"
-                class="sign_up py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
-                Sign Up
-            </button>
+<body class="bg-white min-h-screen flex flex-col">
+    <header class="bg-white w-full h-20 flex items-center justify-between px-4 shadow-md">
+        <img class="w-24 h-16" src="logo ruang murid.png" alt="Logo">
+        <div class="flex gap-3">
+            <button class="log_in py-2 px-4 rounded-full bg-blue-600 text-white hover:bg-blue-700"
+                onclick="openLogin();">Log In</button>
+            <button class="sign_up py-2 px-4 rounded-full bg-yellow-400 text-black hover:bg-yellow-700"
+                onclick="openSignup();">Sign Up</button>
         </div>
+    </header>
+
+    <div class="form_popup" id="login_popup">
+        <form class="login-container">
+            <h2 class="text-3xl font-bold">Log In</h2><br>
+            <input class="inputForm" type="email" placeholder="Email Address" required><br>
+            <input class="inputForm" type="password" placeholder="Password" required>
+
+            <a href="forgotpassword.html" class="forgot-password">Forgot Password?</a>
+            <button type="submit"
+                class="sign_in py-2 px-12 rounded-full text-black hover:bg-blue-700">Sign-In</button><br>
+            <p class="createAcc">Not an education member yet?
+                <a class="underline-offset-1 hover:underline" onclick="openSignup();">Create an Account</a>
+            </p>
+        </form>
     </div>
-    <div class="header2 w-full">
+
+    <div class="form_popup" id="signup_popup">
+        <form class="signup-container">
+            <h2 class="text-3xl font-bold">Sign Up</h2><br>
+            <input class="inputForm" type="First Name" placeholder="First Name" required>
+            <input class="inputForm" type="Last Name" placeholder="Last Name" required><br>
+            <input class="inputForm" type="email" placeholder="Email Address" required>
+            <input class="inputForm" type="password" placeholder="Password" required><br>
+            <button type="submit" class="signup_Form py-2 px-12 rounded-full text-black hover:bg-blue-700 bg">Sign
+                Up</button>
+        </form>
+    </div>
+
+    <div class="bg-blue-400 w-full h-24 flex items-center justify-center">
         <div class="search-container">
-            <div class="absolute inset-y-0 start-0 flex items-center pointer-events-none z-20 ps-3.5">
-                <svg class="shrink-0 size-4 text-black-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.3-4.3"></path>
-                </svg>
-            </div>
             <input type="text" placeholder="Search...">
+            <img src="lens logo.png" alt="Search Button">
+            <script src="systemdashboard.js"></script>
         </div>
     </div>
-    <div class="bottom w-full"></div>
+
+    <footer class="mt-auto w-full h-16 bg-blue-400 flex items-center justify-center">
+        <p class="text-white">&copy; 2024 Ruang Murid</p>
+    </footer>
 </body>
 </body>
 
